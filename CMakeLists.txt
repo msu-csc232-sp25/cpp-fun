@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+project(cppfun)
+set(CMAKE_CXX_STANDARD 20)
+add_executable(simple_demo simple.cpp)
+add_executable(multi_demo multi.cpp)
