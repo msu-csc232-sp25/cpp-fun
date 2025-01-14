@@ -1,5 +1,5 @@
 #include <iostream>
-#include "formulas.h"
+#include "utils.h"
 
 int main()
 {
@@ -13,5 +13,9 @@ int main()
               << radius << " inches is "
               << volume << " cubic inches\n"
               << std::endl;
+
+    // now for something completely different
+    std::cout << "Don't you just love " << season_to_str(WINTER) << "?\n";
+    std::cout << "Or do you prefer " << FALL << "?\n";
     return EXIT_SUCCESS;
 }
