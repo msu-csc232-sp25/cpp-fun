@@ -14,12 +14,20 @@ class IntCell
 public:
     explicit IntCell( int initialValue = 0 );
     /**
-     * Destructor
+     * Destructor.
+     * The destructor is called whenever an object goes out of scope or is subjected to a delete.
      */
     ~IntCell();
 
     /**
-     * Copy constructor
+     * Copy constructor.
+     * Called when
+     *   we have a declaration with initialization, such as
+     *     IntCell B = C;  // copy construct when C is lvalue; move construct if C is rvalue
+     *     IntCell B{ C }; // copy construct when C is lvalue; move construct if C is rvalue
+     *   an object passed using call-by-value (instead of by & or const &)
+     *   an object returned by value (instead of by & or const &); 
+     *      copy used when returning lvalue; move if object being returned is an rvalue
      */
     IntCell( const IntCell & rhs );
 
@@ -30,6 +38,9 @@ public:
 
     /**
      * Copy assignment operator
+     * IntCell B;
+     * IntCell C;
+     * C = B; // assuming B is lvalue; move used if B is rvalue
      */
     IntCell & operator=( const IntCell & rhs );
 
