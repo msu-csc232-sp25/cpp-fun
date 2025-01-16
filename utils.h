@@ -1,3 +1,12 @@
+/**
+ * @brief sample global constants and functions to demonstrate parameter passing techniques
+ * @author Jim Daehn
+ * @file utils.h
+ */
+
+#ifndef CSC232_UTILS_H_
+#define CSC232_UTILS_H_
+
 #include <iostream>     // std::cout, std::ostream, std::hex
 #include <sstream>      // std::stringbuf
 #include <string>       // std::string
@@ -71,3 +80,5 @@ void print_message(const std::string& message)
 {
     std::cout << message;
 }
+
+#endif
