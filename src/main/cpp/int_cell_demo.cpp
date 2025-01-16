@@ -22,5 +22,15 @@ int main( )
     cout << "Cell m2 contents: " << m2.read( ) << "\n";
     cout << "They both should contain the value 5" << endl;
 
+    IntCell* mPtr;
+    mPtr = new IntCell{100};
+    cout << "Cell (pointed to by) mPtr contents: " << mPtr->read() << "\n";
+    cout << "Reseting that cell to 0...\n";
+    mPtr->write( 0 );
+    cout << "Cell (pointed to by) mPtr contents: " << mPtr->read() << "\n";
+
+    delete mPtr;
+    mPtr = nullptr;
+
     return EXIT_SUCCESS;
 }
